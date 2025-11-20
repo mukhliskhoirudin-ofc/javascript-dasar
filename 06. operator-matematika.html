@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Aritmatika</title>
+  </head>
+  <body>
+    <script>
+      /*
+            + = penjumlahan
+            - = pengurangan
+            * = perkalian
+            ** = pangkat
+            / = pembagian
+            % = modulus (sisa pembagian)
+      */
+
+      // operator aritmatika
+      let penjumlahan = 10 + 10;
+      document.writeln("10 + 10 = " + penjumlahan);
+      document.writeln("<br>");
+
+      let pengurangan = 10 - 3;
+      document.writeln("10 - 3 = " + pengurangan);
+      document.writeln("<br>");
+
+      let perkalian = 10 * 5;
+      document.writeln("10 * 5 = " + perkalian);
+      document.writeln("<br>");
+
+      let pangkat = 10 ** 2;
+      document.writeln("10 ^ 2 = " + pangkat);
+      document.writeln("<br>");
+
+      let pembagian = 10 / 5;
+      document.writeln("10 / 5 = " + pembagian);
+      document.writeln("<br>");
+
+      let modulus = 10 % 3;
+      document.writeln("10 % 3 = " + modulus);
+      document.writeln("<br>");
+
+      // operator augmented assignment
+      let counter = 10;
+      counter += 1;
+      counter -= 2;
+      counter *= 3;
+      counter /= 4;
+      counter %= 5;
+      document.writeln("counter = " + counter);
+      document.writeln("<br>");
+
+      // operator unary
+      let unary = 10;
+      unary++;
+      unary--;
+      unary = -unary; //ini untuk menjadi negatif
+      document.writeln("unary = " + unary);
+    </script>
+  </body>
+</html>
