@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipe Data Array</title>
+  </head>
+  <body>
+    <script>
+      //array adalah tipedata yang berisikan kumpulan data
+
+      /*
+            operasi di array:
+            array.push(value)   = menambahkan data arrat
+            array.length        = menghitung panjang array
+            array[index]        = mengakses data di posisi index
+            array[index]=value  = mengubah data di posisi index
+            delete array[index] = menghapus data di posisi index, namun index tidak bergeser
+      */
+
+      let arrayKosong = [];
+      let arrayNama = ["Mukhlis", "Lexaa", "Adalia", "Laila"];
+
+      //cara menambahkan array
+      const names = [];
+      names.push("Glitsh");
+      names.push("mukhlis", "Valexaa", "Online");
+
+      //mengubah data di array
+      names[1] = "Mukhlis Khoirudin";
+
+      //menghapus data di array
+      delete names[1];
+
+      //menghitung panjang array
+      console.info(names.length);
+
+      console.table(names);
+    </script>
+  </body>
+</html>

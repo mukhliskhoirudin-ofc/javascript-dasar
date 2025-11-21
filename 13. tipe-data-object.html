@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipe Data Object</title>
+  </head>
+  <body>
+    <script>
+      //note: di js tidak ada associative array, kalau dipaksa di akan jadi object
+      //tipe data object adalah tipe data yang mirip dengan tipe data array
+
+      //membuat object kosong, menambahkan atau mengubah property / atribut
+      const orang = {};
+
+      orang["nama"] = "Mukhlis Khoirudin";
+      orang["alamat"] = "Wiralaga";
+      orang["umur"] = 20;
+
+      //menghapus object
+      delete orang["umur"];
+      //console.table(orang);
+
+      //membuat object dengan property langsung gk kek diatas
+      const data = {
+        name: "Mukhlis Khoirudin",
+        alamat: "Indonesia",
+        umur: 20,
+      };
+
+      //cara mengakses property object
+      console.log(`Nama: ${data.name}`);
+      console.log(`Alamat: ${data.alamat}`);
+      console.log(`Umur: ${data.umur}`);
+    </script>
+  </body>
+</html>
