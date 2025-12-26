@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring</title>
+  </head>
+  <body>
+    <script>
+      // Destructuring adalah fitur yang digunakan untuk membongkar value-value di array atau object ke dalam variable-variable
+      // fitur ini sangat mempermudah kita ketika ingin mengambil data dari array dan object tanpa harus melakukan pengambilan data satu persatu
+
+      {
+        const names = ["Mukhlis", "Khoirudin", "Ganteng", "Programmer"];
+        const [firstName, middleName, lastName, ...others] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+        console.info(others);
+      }
+
+      //mengambil data di object
+      {
+        const person = {
+          firstName: "Eko",
+          middleName: "Kurniawan",
+          address: {
+            street: "Jalan Belakang",
+            city: "Jakarta",
+            country: "Indonesia",
+          },
+          hobby: "Coding",
+          channel: "Programmer Zaman Now",
+        };
+
+        const { firstName, middleName, address, ...others } = person;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(address);
+        console.info(others);
+      }
+
+      //Destructuring nested object
+      {
+        const person = {
+          firstName: "Eko",
+          middleName: "Kurniawan",
+          address: {
+            street: "Jalan Belakang",
+            city: "Jakarta",
+            country: "Indonesia",
+          },
+          hobby: "Coding",
+          channel: "Programmer Zaman Now",
+        };
+
+        const {
+          firstName,
+          middleName,
+          address: { country, city, street }, //jadi tidak bisa mengakses address karna sudah di destructuring nested object
+          ...others
+        } = person;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(country);
+        console.info(city);
+        console.info(street);
+        console.info(others);
+      }
+
+      //destructuring function parameter(1)
+      {
+        function displayPerson({ firstName, middleName, lastName }) {
+          console.info(firstName);
+          console.info(middleName);
+          console.info(lastName);
+        }
+
+        const person = {
+          firstName: "Eko",
+          middleName: "Kurniawan",
+          lastName: "Kurniawan",
+        };
+
+        displayPerson(person);
+      }
+
+      //destructuring function parameter(2)
+      function sum([first, second]) {
+        return first + second;
+      }
+
+      console.info(sum([10, 10]));
+      console.info(sum([20, 10]));
+    </script>
+  </body>
+</html>
